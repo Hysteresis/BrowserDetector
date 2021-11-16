@@ -5,55 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>detectBrowser</title>
+    <link rel="stylesheet"  href="style.css">
+    <script defer src="app.js"></script>
     
 </head>
-<style type="text/css">
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: content-box;
-        text-decoration: none;
-    }
 
-    body{
-        display:flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 100vh;
-        background: linear-gradient(14deg,black 50%, red 50%);
-    }
-
-    .container{
-        display: flex;
-        align-items: center;
-        justify-content:center;
-    }
-
-    .container h1{
-        color: blueviolet;
-        font-size: 50px;
-    }
-
-    ul{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: black;
-    }
-
-    ul li{
-        list-style: none;
-        margin-left: 25px;
-    }
-
-    .isSelected{
-        color: turquoise;
-        text-shadow: 3px 3px 22px orange;
-        font-size: 40px;
-    }
-</style>
 <body>
-    
+   
 <main class="container">
     <h1>Navigateur :</h1>
     <ul>
@@ -65,37 +23,8 @@
         <li class="edge">Edge</li>
     </ul>
 </main>
-<script>
-    let userAgent = navigator.userAgent; // Navigator est un objet qui contient des informations à propos du navigateur
-    // console.log(userAgent);
-    let browser;
 
-    if(userAgent.match(/edg/i)){
-        browser = 'edge';
-        alert('edgeeeeeeeeeee !!!!!!');
-
-    }else if(userAgent.match(/firefox|fxios/i)){
-        browser = 'firefox';
-
-    }else if(userAgent.match(/opr/i)){
-        browser = 'opera';
-
-    }else if(userAgent.match(/chrome|chromium|vrios/i)){
-        browser = 'chrome';
-        alert('chromeeeee !!!!!!');
-    }else if(userAgent.match(/safari/i)){
-        browser = 'safari';
-        alert('safari !!!!!!');
-        
-    }else{
-        alert('la detection a échoué');
-    }
-
-    console.log(browser);
-
-    const BROWSER = document.querySelector(`.${browser}`);
-        BROWSER.classList.add('isSelected');
-</script>
+<script src="app.js"></script> 
 
 
 </body>
