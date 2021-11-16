@@ -14,23 +14,54 @@
         box-sizing: content-box;
         text-decoration: none;
     }
+
     body{
         display:flex;
         align-items: center;
         justify-content: center;
         min-height: 100vh;
-        background: linear-gradient(14deg,blue 50%, yellow 50%);
+        background: linear-gradient(14deg,black 50%, red 50%);
+    }
+
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content:center;
+    }
+
+    .container h1{
+        color: blueviolet;
+        font-size: 50px;
+    }
+
+    ul{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: black;
+    }
+
+    ul li{
+        list-style: none;
+        margin-left: 25px;
+    }
+
+    .isSelected{
+        color: turquoise;
+        text-shadow: 3px 3px 22px orange;
+        font-size: 40px;
     }
 </style>
 <body>
     
 <main class="container">
+    <h1>Navigateur :</h1>
     <ul>
-        <li class="chrome">Chrome</li>
-        <li class="firefox">firefox</li>
-        <li class="opera">opera</li>
-        <li class="safari">safari</li>
-        <li class="edge">edge</li>
+        <li class="chrome isSelected">Chrome</li>
+        <li class="firefox">Firefox</li>
+        <li class="opera">Opera</li>
+        <li class="safari">Safari</li>
+        <li class="edge">Edge</li>
     </ul>
 </main>
 
